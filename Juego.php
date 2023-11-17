@@ -12,9 +12,9 @@ class Juego extends Soporte{
     }
     function muestraJugadoresPosibles(){
         if ($this->maxNumJugadores ==1){
-            echo ("Para un jugador");
+            echo ("Para un jugador<br>");
         }else{
-            echo ("Para ".$this->maxNumJugadores." jugadores");
+            echo ("Para ".$this->maxNumJugadores." jugadores<br>");
         }
     }
     function muestraResumen(){
