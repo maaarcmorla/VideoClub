@@ -15,22 +15,27 @@ class Cliente {
         
     }
 
+    // Getter Numero para obtener el valor de numero
     function getNumero(){
         return $this->numero;
     }
 
+    // Setter Numero para modificar el valor de numero
     function setNumero($numero){
         $this->numero = $numero;
     }
 
+    // Getter Numero de soportes alquilados para obtener el valor de la cantidad de soportes alquilados
     function getNumSoportesAlquilados(){
         return count($this->soportesAlquilados);
     }
 
+    // Mostramos el resumen del cliente
     function muestraResumen(){
         echo ("Nombre: ".$this->nombre."<br>");
         echo ("<strong> El cliente tiene ".count($this->soportesAlquilados)." soportes alquilados</strong>");
     }
+
     //REVISAR
     function tieneAlquilado(Soporte $s) : bool{
         for ($i=0;$i<count($this->soportesAlquilados);$i++){
@@ -41,6 +46,7 @@ class Cliente {
             }
         }
     }
+
 
     function alquilar(Soporte $s) : bool{
         if (in_array($s, $this->soportesAlquilados)){
